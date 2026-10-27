@@ -1,0 +1,189 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>الاختبار الشهري الثالث · الفقه</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg1:#0b2a1c;--bg2:#145236;--glow:#1f7a4f;--hl:#e9d27a;--btnfg:#0b2a1c;--paper:#f3f7ee;--bd:#c9e0b8;--qink:#145236;
+  --c-bg:radial-gradient(ellipse at 80% -10%,var(--glow) 0%,transparent 55%),radial-gradient(ellipse at 0% 60%,color-mix(in srgb,var(--glow) 55%,transparent) 0%,transparent 45%),linear-gradient(180deg,var(--bg1) 0%,var(--bg2) 100%);
+  --ink:#f6f3ff;--sub:color-mix(in srgb,#fff 78%,var(--glow));
+  --ok:#2fa36b;--no:#d6455d;
+  --tf:'El Messiri','Tajawal',system-ui,sans-serif;--bf:'Tajawal',system-ui,sans-serif;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--bg1)}
+body{margin:0;min-height:100vh;background:var(--c-bg);background-attachment:fixed;color:var(--ink);font-family:var(--bf);font-size:17px;line-height:1.75;direction:rtl}
+[hidden]{display:none!important}
+.wrap{max-width:760px;margin:0 auto;padding-block:18px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:18px}
+.logo{align-self:center;height:54px;width:auto}
+.hero{position:relative;border-radius:24px;padding:26px 20px 22px;overflow:hidden;border:2px solid color-mix(in srgb,var(--hl) 70%,transparent);background:linear-gradient(160deg,color-mix(in srgb,var(--bg2) 85%,#000) 0%,color-mix(in srgb,var(--glow) 60%,var(--bg1)) 100%);box-shadow:0 18px 50px rgba(0,0,0,.35);display:flex;flex-direction:column;gap:10px}
+.hero svg.pat{position:absolute;inset:0;width:100%;height:100%;opacity:.13;pointer-events:none}
+.hero>*{position:relative}
+.tagrow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tag{font-family:var(--tf);font-weight:700;font-size:.85rem;padding:3px 14px;border-radius:30px;background:var(--hl);color:var(--btnfg)}
+.tag.ghost{background:transparent;color:var(--hl);border:1.5px solid var(--hl)}
+.series{margin:0;font-weight:700;color:var(--sub);font-size:1rem}
+h1{margin:0;font-family:var(--tf);font-weight:700;font-size:clamp(1.8rem,7vw,2.6rem);line-height:1.3;color:#fff;text-wrap:balance}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:10px 8px;text-align:center;min-width:0}
+.stat b{display:block;font-family:var(--tf);font-size:1.5rem;color:var(--hl);line-height:1.3}
+.stat span{font-size:.82rem;color:var(--sub)}
+details.cov{background:rgba(0,0,0,.18);border-radius:14px;padding:8px 14px}
+details.cov summary{cursor:pointer;font-weight:700;color:var(--hl)}
+.cov ol{list-style:none;margin:8px 0 2px;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.cov li{font-size:.85rem;background:rgba(255,255,255,.1);border-radius:20px;padding:2px 10px 2px 4px;display:flex;gap:6px;align-items:center}
+.cov li b{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:50%;background:var(--hl);color:var(--btnfg);font-size:.75rem}
+.rules{margin:0;padding:0 18px 0 0;color:var(--sub);font-size:.95rem}
+.name{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.name label{font-weight:700}
+.req{color:var(--hl);font-size:.85em}
+.name input{flex:1 1 220px;min-width:0;max-width:100%;font:inherit;padding:8px 14px;border-radius:12px;border:2px solid var(--hl);background:rgba(255,255,255,.94);color:#222}
+.name input.need{border-color:var(--no);box-shadow:0 0 0 3px var(--no)}
+.bar{position:sticky;top:0;z-index:5;margin-inline:-4px;padding:8px 12px;border-radius:0 0 14px 14px;background:color-mix(in srgb,var(--bg1) 88%,transparent);backdrop-filter:blur(6px);display:flex;align-items:center;gap:12px;font-size:.9rem;font-weight:700}
+.track{flex:1;height:10px;border-radius:10px;background:rgba(255,255,255,.15);overflow:hidden}
+.fill{height:100%;width:0;background:var(--hl);border-radius:10px;transition:width .25s}
+#qs{display:flex;flex-direction:column;gap:16px}
+.q{color-scheme:light;position:relative;background:radial-gradient(ellipse at 100% 0%,color-mix(in srgb,var(--hl) 22%,transparent) 0%,transparent 45%),var(--paper);color:#2a2546;border-radius:20px;padding:18px 18px 16px;display:flex;flex-direction:column;gap:12px;box-shadow:0 10px 30px rgba(0,0,0,.25);overflow:hidden}
+.qh{display:flex;gap:12px;align-items:flex-start}
+.n{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-family:var(--tf);font-weight:700;font-size:1.1rem;background:var(--qink);color:var(--hl)}
+.qt{min-width:0;display:flex;flex-direction:column;gap:2px}
+.kind{font-size:.8rem;font-weight:700;color:color-mix(in srgb,var(--qink) 70%,#888)}
+.qtext{margin:0;font-weight:700;font-size:1.08rem;color:var(--qink);line-height:1.85}
+.blank{display:inline-block;min-width:4.5em;border-bottom:3px dotted var(--qink);margin:0 4px}
+.opts{display:grid;gap:8px}
+.opts.tf{grid-template-columns:1fr 1fr}
+.opt{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:14px;background:#fff;border:2px solid var(--bd);cursor:pointer;transition:transform .12s}
+.opt:hover{transform:translateY(-1px)}
+.opt input{accent-color:var(--qink);width:20px;height:20px;flex:none;margin:0}
+.opt span{min-width:0}
+.opt:has(input:checked){outline:3px solid var(--qink);outline-offset:-1px}
+.opt:has(input:focus-visible){outline:3px dashed var(--qink)}
+.txt{width:100%;font:inherit;padding:10px 14px;border-radius:14px;border:2px solid var(--bd);background:#fff;color:#222}
+.txt:focus-visible,.name input:focus-visible{outline:3px solid var(--hl);outline-offset:1px}
+.fb{display:none;border-radius:14px;padding:10px 14px;font-size:.98rem;line-height:1.8}
+.done .fb{display:block}
+.fb b{display:block}
+.fb i{display:block;font-style:normal;font-size:.85rem;opacity:.75;margin-top:4px}
+.q.good .fb{background:color-mix(in srgb,var(--ok) 13%,transparent);border:2px solid var(--ok)}
+.q.bad .fb{background:color-mix(in srgb,var(--no) 11%,transparent);border:2px solid var(--no)}
+.q.good .fb b{color:var(--ok)} .q.bad .fb b{color:var(--no)}
+.opt.right{border-color:var(--ok);box-shadow:inset 0 0 0 2px var(--ok)}
+.opt.wrong{border-color:var(--no);box-shadow:inset 0 0 0 2px var(--no)}
+.done .opt{cursor:default}
+.mark{position:absolute;top:14px;left:14px;width:30px;height:30px;border-radius:50%;display:none;place-items:center;color:#fff;font-weight:700}
+.q.good .mark{display:grid;background:var(--ok)} .q.bad .mark{display:grid;background:var(--no)}
+.actions{display:flex;flex-direction:column;align-items:center;gap:8px}
+.btn{font:inherit;font-family:var(--tf);font-weight:700;font-size:1.2rem;padding:12px 34px;border-radius:40px;border:0;background:var(--hl);color:var(--btnfg);cursor:pointer;box-shadow:0 6px 0 rgba(0,0,0,.28);text-decoration:none;display:inline-block}
+.btn:active{transform:translateY(3px);box-shadow:0 3px 0 rgba(0,0,0,.28)}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.warn{margin:0;color:var(--hl);font-weight:700;text-align:center}
+.result{border-radius:24px;padding:24px 18px;background:linear-gradient(160deg,color-mix(in srgb,var(--bg2) 85%,#000),color-mix(in srgb,var(--glow) 55%,var(--bg1)));box-shadow:0 14px 40px rgba(0,0,0,.3);border:2px solid var(--hl);display:flex;flex-direction:column;gap:10px;align-items:center;text-align:center}
+.ring{--p:0;width:150px;height:150px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--hl) calc(var(--p)*1%),rgba(255,255,255,.14) 0)}
+.ring div{width:118px;height:118px;border-radius:50%;background:var(--bg1);display:grid;place-items:center;font-family:var(--tf);font-weight:700;font-size:1.9rem;color:var(--hl);line-height:1.1}
+.ring small{display:block;font-size:.8rem;color:var(--sub)}
+.grade{font-family:var(--tf);font-weight:700;font-size:1.5rem;color:#fff}
+.msg{font-weight:700;color:var(--sub)}
+.who{font-weight:700;font-size:.95rem}
+.review{width:100%;text-align:right;background:rgba(0,0,0,.2);border-radius:14px;padding:10px 14px;font-size:.95rem}
+.review b{color:var(--hl)}
+.review ul{margin:4px 0 0;padding-right:20px}
+.foot{text-align:center;font-size:.85rem;color:var(--sub);opacity:.85}
+@media (max-width:420px){.stats{gap:6px}.stat b{font-size:1.25rem}.opts.tf{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body>
+<main class="wrap">
+  <img class="logo" src="data:image/webp;base64,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" alt="قدوة" width="387" height="136">
+  <header class="hero">
+    <svg class="pat" aria-hidden="true"><defs><pattern id="p8" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M32 4 L39 18 L54 14 L50 29 L60 32 L50 35 L54 50 L39 46 L32 60 L25 46 L10 50 L14 35 L4 32 L14 29 L10 14 L25 18 Z" fill="none" stroke="#fff" stroke-width="1.4"/></pattern></defs><rect width="100%" height="100%" fill="url(#p8)"/></svg>
+    <div class="tagrow"><span class="tag">اختبار شهري</span><span class="tag ghost">الحلقات ١٧ - ٢٤</span></div>
+    <p class="series">سلسلة الفقهاء قادة (فقه الشباب)</p>
+    <h1>الاختبار الشهري الثالث</h1>
+    <div class="stats">
+      <div class="stat"><b>٢٠</b><span>سؤالًا</span></div>
+      <div class="stat"><b>٢٥</b><span>دقيقة تقريبًا</span></div>
+      <div class="stat"><b>مرة</b><span>واحدة فقط</span></div>
+    </div>
+    <details class="cov"><summary>الحلقات التي يشملها الاختبار</summary><ol><li><b>١٧</b>الصيام - فضله وحكمه ومستحباته</li><li><b>١٨</b>منهيات الصيام ومبطلاته وصيام التطوع</li><li><b>١٩</b>الحج - فضله ومناسكه</li><li><b>٢٠</b>العمرة - فضلها وكيفية أدائها</li><li><b>٢١</b>الأطعمة - الحلال والحرام</li><li><b>٢٢</b>الثياب والزينة</li><li><b>٢٣</b>النكاح</li><li><b>٢٤</b>البيوع</li></ol></details>
+    <ul class="rules">
+      <li>اكتب اسمك الثلاثي أولًا، ثم أجب عن كل الأسئلة بنفسك.</li>
+      <li>اضغط «أظهر النتيجة» مرة واحدة، ثم أرسل درجتك لمعلمك.</li>
+    </ul>
+    <div class="name"><label for="sname">اسمك الثلاثي <span class="req">(مطلوب)</span>:</label><input id="sname" type="text" autocomplete="name" required placeholder="اكتب اسمك هنا"></div>
+  </header>
+  <div class="bar" aria-live="polite"><span id="cnt"></span><div class="track"><div class="fill" id="fill"></div></div></div>
+  <section id="qs"></section>
+  <div class="actions">
+    <p class="warn" id="warn" hidden></p>
+    <button class="btn" id="go" type="button">أظهر النتيجة</button>
+  </div>
+  <section class="result" id="res" hidden>
+    <div class="ring" id="ring"><div id="score"></div></div>
+    <div class="grade" id="grade"></div>
+    <div class="msg" id="msg"></div>
+    <div class="who" id="who"></div>
+    <div class="review" id="review" hidden></div>
+    <div id="sendwrap" hidden><a class="btn" id="send" target="_blank" rel="noopener">أرسل درجتي لمعلمي</a></div>
+  </section>
+  <p class="foot">قُدوة · الفقهاء قادة (فقه الشباب) · الاختبار الشهري الثالث</p>
+</main>
+<script>
+const Q=[{"t": "fill", "d": "e", "l": 17, "q": "إن في الجنة بابًا يقال له «___» يدخل منه الصائمون يوم القيامة.", "a": ["الريان", "الريّان"], "e": "لا يدخل منه أحد غيرهم.", "lt": "الحلقة ١٧: الصيام - فضله وحكمه ومستحباته"}, {"t": "mcq", "d": "e", "l": 17, "q": "قال النبي ﷺ: «إذا دخل رمضان فُتحت أبواب الجنة، وغُلّقت أبواب جهنم، و...»", "o": ["طال النهار", "سُلسلت الشياطين", "كثر الطعام", "توقفت الدراسة"], "a": 1, "e": "فرمضان فرصة عظيمة للطاعة.", "lt": "الحلقة ١٧: الصيام - فضله وحكمه ومستحباته"}, {"t": "mcq", "d": "m", "l": 17, "q": "امتنع شخص عن الطعام من الفجر إلى المغرب من أجل الحمية فقط، دون نية التعبد. هل هو صائم شرعًا؟", "o": ["نعم، المهم أنه لم يأكل", "لا؛ لأن النية شرط في الصيام", "نعم إذا كان في رمضان", "نعم إذا شرب الماء فقط"], "a": 1, "e": "«إنما الأعمال بالنيات».", "lt": "الحلقة ١٧: الصيام - فضله وحكمه ومستحباته"}, {"t": "mcq", "d": "m", "l": 17, "q": "أذّن المغرب وأنت صائم، فقال أخوك: «لننتظر نصف ساعة». ما السنة؟", "o": ["تأخير الفطر حتى العشاء", "تعجيل الفطر عند الأذان", "الإفطار قبل الأذان", "لا فرق"], "a": 1, "e": "«لا يزال الناس بخير ما عجّلوا الفطر».", "lt": "الحلقة ١٧: الصيام - فضله وحكمه ومستحباته"}, {"t": "mcq", "d": "e", "l": 18, "q": "إذا سابّك أحد وأنت صائم، فماذا أرشد النبي ﷺ أن تقول؟", "o": ["إني امرؤ صائم", "سأرد عليك بعد الإفطار", "أنت أسوأ مني", "لا أقول شيئًا وأضربه"], "a": 0, "e": "الصيام يربّي على الحلم وضبط اللسان.", "lt": "الحلقة ١٨: منهيات الصيام ومبطلاته وصيام التطوع"}, {"t": "mcq", "d": "m", "l": 18, "q": "شربت ماءً ناسيًا وأنت صائم في رمضان. ما حكم صيامك؟", "o": ["فسد ويجب القضاء", "صيامي صحيح فأُكمل صومي", "أُفطر بقية اليوم", "أصوم يومين بدلًا منه"], "a": 1, "e": "«من نسي وهو صائم فأكل أو شرب فليتم صومه، فإنما أطعمه الله وسقاه».", "lt": "الحلقة ١٨: منهيات الصيام ومبطلاته وصيام التطوع"}, {"t": "mcq", "d": "m", "l": 18, "q": "ما فضل صيام يوم عرفة لغير الحاج؟", "o": ["يكفّر يومًا واحدًا", "يكفّر السنة الماضية والباقية", "يكفّر شهرًا", "لا فضل له"], "a": 1, "e": "ويوم عاشوراء يكفّر السنة الماضية.", "lt": "الحلقة ١٨: منهيات الصيام ومبطلاته وصيام التطوع"}, {"t": "fill", "d": "e", "l": 19, "q": "التلبية: «لبيك اللهم لبيك، لبيك لا ___ لك لبيك».", "a": ["شريك"], "e": "التلبية إعلان للتوحيد.", "lt": "الحلقة ١٩: الحج - فضله ومناسكه"}, {"t": "mcq", "d": "e", "l": 19, "q": "في أي يوم يكون الوقوف بعرفة؟", "o": ["الثامن من ذي الحجة", "التاسع من ذي الحجة", "العاشر من ذي الحجة", "الأول من ذي الحجة"], "a": 1, "e": "«الحج عرفة».", "lt": "الحلقة ١٩: الحج - فضله ومناسكه"}, {"t": "mcq", "d": "h", "l": 19, "q": "أخوك الصغير (لم يبلغ) سيحج مع أبيكم هذا العام. هل يصح حجه؟ وهل تسقط عنه حجة الإسلام؟", "o": ["لا يصح حتى يبلغ", "يصح ولأبيه أجر، لكنه إذا بلغ وجبت عليه حجة الإسلام", "يصح وتسقط عنه حجة الإسلام للأبد", "يصح لكن بلا أجر لأحد"], "a": 1, "e": "رفعت امرأة صبيًّا فقالت: ألهذا حج؟ قال ﷺ: «نعم، ولكِ أجر». وحجة الإسلام تجب بعد البلوغ.", "lt": "الحلقة ١٩: الحج - فضله ومناسكه"}, {"t": "fill", "d": "m", "l": 20, "q": "قال النبي ﷺ: «عمرة في ___ تعدل حجة».", "a": ["رمضان"], "e": "أي في الأجر، ولا تُسقط حجة الفريضة.", "lt": "الحلقة ٢٠: العمرة - فضلها وكيفية أدائها"}, {"t": "mcq", "d": "m", "l": 20, "q": "كيف يكون الطواف حول الكعبة؟", "o": ["سبعة أشواط يبدأ من الحجر الأسود والكعبة عن يساره", "ثلاثة أشواط والكعبة عن يمينه", "شوط واحد سريع", "سبعة أشواط يبدأ من مقام إبراهيم"], "a": 0, "e": "ثم يصلي ركعتين خلف المقام إن تيسّر.", "lt": "الحلقة ٢٠: العمرة - فضلها وكيفية أدائها"}, {"t": "mcq", "d": "m", "l": 20, "q": "في السعي، قال أخوك: «لنبدأ من المروة لأنها أقرب». ما الصواب؟", "o": ["نبدأ من أي مكان", "نبدأ بالصفا وننتهي بالمروة", "نبدأ من المروة", "نترك السعي"], "a": 1, "e": "قال ﷺ: «أبدأ بما بدأ الله به»: ﴿إن الصفا والمروة من شعائر الله﴾.", "lt": "الحلقة ٢٠: العمرة - فضلها وكيفية أدائها"}, {"t": "mcq", "d": "e", "l": 21, "q": "ما القاعدة في الأطعمة والأشربة؟", "o": ["كلها حرام إلا ما دلّ الدليل على إباحته", "كلها حلال إلا ما دلّ الدليل على تحريمه", "لا قاعدة لذلك", "الحلال والحرام متساويان"], "a": 1, "e": "الأصل في الأطعمة الإباحة.", "lt": "الحلقة ٢١: الأطعمة - الحلال والحرام"}, {"t": "mcq", "d": "m", "l": 21, "q": "في رحلة صيد بحري وجدتم سمكة ماتت في الشبكة. هل يحل أكلها؟", "o": ["لا؛ لأنها ماتت", "نعم؛ فميتة البحر حلال", "لا؛ لأنها لم تُذبح", "يحل للكبار فقط"], "a": 1, "e": "«هو الطهور ماؤه، الحِلّ ميتته».", "lt": "الحلقة ٢١: الأطعمة - الحلال والحرام"}, {"t": "fill", "d": "e", "l": 21, "q": "قال النبي ﷺ: «كل شراب أسكر فهو ___».", "a": ["حرام"], "e": "وسمّى عثمان رضي الله عنه الخمر «أم الخبائث».", "lt": "الحلقة ٢١: الأطعمة - الحلال والحرام"}, {"t": "mcq", "d": "m", "l": 22, "q": "أراد صديقك قصة شعر يحلق فيها الجوانب ويترك الوسط طويلًا. بماذا تنصحه؟", "o": ["فكرة جميلة", "هذا القزع الذي نهى عنه النبي ﷺ؛ يحلقه كله أو يتركه كله", "يلوّن الجوانب", "يحلق الوسط ويترك الجوانب"], "a": 1, "e": "«احلقوه كله أو اتركوه كله».", "lt": "الحلقة ٢٢: الثياب والزينة"}, {"t": "mcq", "d": "e", "l": 23, "q": "قال النبي ﷺ: «خيركم خيركم لأهله، وأنا...»", "o": ["أكثركم مالًا", "خيركم لأهلي", "أقواكم", "أعلمكم"], "a": 1, "e": "فنحسن إلى أهلنا ونساعدهم في البيت اقتداءً به ﷺ.", "lt": "الحلقة ٢٣: النكاح"}, {"t": "mcq", "d": "m", "l": 24, "q": "اقترض منك زميلك 50 ريالًا، وأردت أن تشترط أن يردّها 60. ما حكم ذلك؟", "o": ["حلال إذا رضي", "تجارة جائزة", "ربا محرم، فلا أشترط زيادة", "صدقة"], "a": 2, "e": "كل قرض جرّ نفعًا مشروطًا فهو ربا.", "lt": "الحلقة ٢٤: البيوع"}, {"t": "mcq", "d": "e", "l": 24, "q": "تبيع لعبة قديمة لصديقك وفيها كسر صغير لا يُرى. ما التصرف الصحيح؟", "o": ["أخفي العيب لأبيعها بسعر أعلى", "أخبره بالعيب قبل البيع", "أقول إنها جديدة", "أبيعها وأسكت"], "a": 1, "e": "«من غشّ فليس مني».", "lt": "الحلقة ٢٤: البيوع"}];
+const LESSON="الفقه - الاختبار الشهري الثالث (الحلقات 17-24)";
+const FORM={"url": "https://docs.google.com/forms/d/e/1FAIpQLSfyjIsOctLOcUTosXSoKAtAspjStFhqSf3Ef7TcUlqjLdrI5A/viewform", "name": "entry.170516688", "lesson": "entry.1265407028", "score": "entry.1221539964"};
+const AR=n=>Number(n).toLocaleString('ar-EG');
+const KIND={mcq:'اختر الإجابة الصحيحة',tf:'صح أم خطأ؟',fill:'أكمل الفراغ'};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const box=document.getElementById('qs');
+Q.forEach((q,i)=>{
+  if(q.t==='tf'){q.o=['صح','خطأ'];q.ord=[0,1]}
+  else if(q.t==='mcq'){q.ord=q.fix?q.o.map((_,j)=>j):shuf(q.o.map((_,j)=>j))}
+  const el=document.createElement('article');el.className='q';el.id='q'+i;
+  let body='';
+  const text=esc(q.q).replace(/_{3,}/g,'<span class="blank"></span>');
+  if(q.o) body=`<div class="opts${q.t==='tf'?' tf':''}" role="radiogroup">`+q.ord.map(j=>`<label class="opt" data-j="${j}"><input type="radio" name="r${i}" value="${j}"><span>${esc(q.o[j])}</span></label>`).join('')+'</div>';
+  if(q.t==='fill') body=`<input class="txt" id="f${i}" type="text" autocomplete="off" placeholder="اكتب الكلمة الناقصة">`;
+  el.innerHTML=`<span class="mark" aria-hidden="true"></span><div class="qh"><span class="n">${AR(i+1)}</span><div class="qt"><span class="kind">${KIND[q.t]}</span><p class="qtext">${text}</p></div></div>${body}<div class="fb" aria-live="polite"></div>`;
+  box.appendChild(el);
+});
+const norm=s=>String(s).replace(/[ً-ْٰـ]/g,'').replace(/[أإآٱ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي').replace(/ؤ/g,'و').replace(/ئ/g,'ي').replace(/[^ء-ي0-9a-z ]/gi,' ').replace(/\s+/g,' ').trim();
+const noal=s=>s.split(' ').map(w=>w.replace(/^(و|ف|ب|ل)?ال(?=..)/,'')).join(' ');
+function fillOK(v,acc){const I=norm(v);if(!I)return false;const I2=noal(I);
+  return acc.some(a=>{const A=norm(a),A2=noal(A);return I===A||I2===A2||(' '+I+' ').includes(' '+A+' ')||(' '+I2+' ').includes(' '+A2+' ')})}
+function answered(q,i){if(q.o)return!!document.querySelector(`input[name="r${i}"]:checked`);return norm(document.getElementById('f'+i).value)!==''}
+const cnt=document.getElementById('cnt'),fill=document.getElementById('fill');
+function prog(){const n=Q.filter((q,i)=>answered(q,i)).length;cnt.textContent=`أجبتَ ${AR(n)} من ${AR(Q.length)}`;fill.style.width=(n/Q.length*100)+'%'}
+box.addEventListener('input',prog);box.addEventListener('change',prog);prog();
+const go=document.getElementById('go'),warn=document.getElementById('warn');let warned=false;
+go.addEventListener('click',()=>{
+  const nmEl=document.getElementById('sname');
+  if(nmEl.value.trim().length<3){nmEl.classList.add('need');warn.hidden=false;warn.textContent='اكتب اسمك أولًا في أعلى الصفحة، ثم اضغط «أظهر النتيجة».';nmEl.scrollIntoView({block:'center'});nmEl.focus();return}
+  const miss=Q.map((q,i)=>answered(q,i)?null:i+1).filter(Boolean);
+  if(miss.length&&!warned){warned=true;warn.hidden=false;warn.textContent=`لم تُجب بعد عن السؤال ${miss.map(AR).join('، ')}. أكمل إجابتك، أو اضغط مرة أخرى لترى النتيجة.`;go.textContent='أظهر النتيجة على أي حال';return}
+  nmEl.classList.remove('need');nmEl.readOnly=true;
+  let s=0;const weak={};
+  Q.forEach((q,i)=>{const el=document.getElementById('q'+i),fb=el.querySelector('.fb');el.classList.add('done');let ok=false,right;
+    if(q.o){const c=document.querySelector(`input[name="r${i}"]:checked`);ok=!!c&&+c.value===q.a;right=q.o[q.a];
+      el.querySelectorAll('.opt').forEach(o=>{const j=+o.dataset.j;if(j===q.a)o.classList.add('right');else if(c&&+c.value===j)o.classList.add('wrong')});
+      el.querySelectorAll('input').forEach(x=>x.disabled=true);}
+    else{const f=document.getElementById('f'+i);ok=fillOK(f.value,q.a);f.readOnly=true;right=q.a[0];}
+    fb.innerHTML=(ok?'<b>إجابة صحيحة، أحسنت!</b>':`<b>الإجابة الصحيحة: ${esc(right)}</b>`)+esc(q.e||'')+`<i>من ${esc(q.lt)}</i>`;
+    if(ok)s++;else weak[q.lt]=1;
+    el.classList.add(ok?'good':'bad');el.querySelector('.mark').textContent=ok?'✓':'✗';
+  });
+  const t=Q.length,p=Math.round(s/t*100),nm=nmEl.value.trim();
+  const d=new Date();document.getElementById('who').textContent=`${nm} · ${LESSON} · ${d.toLocaleDateString('ar-EG')} ${d.toLocaleTimeString('ar-EG',{hour:'2-digit',minute:'2-digit'})}`;
+  document.getElementById('score').innerHTML=`${AR(s)}<small>من ${AR(t)}</small>`;
+  document.getElementById('ring').style.setProperty('--p',p);
+  const G=p>=90?['ممتاز','ما شاء الله! استوعبتَ الحلقات استيعابًا رائعًا.']:p>=80?['جيد جدًا','أحسنت! راجع التصويبات القليلة لتكمل الصورة.']:p>=65?['جيد','مستوى طيب، وتستطيع أن تكون أفضل بمراجعة الحلقات أدناه.']:p>=50?['مقبول','راجع الحلقات المذكورة أدناه، ثم ناقش معلمك فيما أشكل عليك.']:['يحتاج إلى مراجعة','لا بأس، ارجع إلى الحلقات المذكورة أدناه وراجعها بهدوء.'];
+  document.getElementById('grade').textContent=`${G[0]} · ${AR(p)}٪`;
+  document.getElementById('msg').textContent=G[1];
+  const W=Object.keys(weak);if(W.length){const r=document.getElementById('review');r.hidden=false;r.innerHTML='<b>حلقات تحتاج مراجعتها:</b><ul>'+W.map(x=>`<li>${esc(x)}</li>`).join('')+'</ul>'}
+  if(FORM){const u=new URL(FORM.url);u.searchParams.set('usp','pp_url');u.searchParams.set(FORM.name,nm);u.searchParams.set(FORM.lesson,LESSON);u.searchParams.set(FORM.score,`${s} / ${t}`);document.getElementById('send').href=u.toString();document.getElementById('sendwrap').hidden=false}
+  warn.hidden=true;go.hidden=true;const res=document.getElementById('res');res.hidden=false;
+  res.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});
+});
+</script>
+</body></html>
